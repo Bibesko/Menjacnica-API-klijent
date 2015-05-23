@@ -96,6 +96,8 @@ public class AzuriranjeKursneListe {
 			}
 			
 			upisiValute(JsonRatesAPIKomunikacija.vratiIznosKurseva(valute), datum.getTime().toString());
+			
+			
 		} catch (IOException e) {
 			System.out.println("Greska: "+e.getMessage());
 		}
