@@ -20,7 +20,7 @@ public class JsonRatesAPIKomunikacija {
 	private static final String jsonRatesURL = "http://jsonrates.com/get/";
 
 	
-	private String sendGet(String url) throws IOException {
+	private static String sendGet(String url) throws IOException {
 		URL obj = new URL(url);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 		
@@ -46,7 +46,7 @@ public class JsonRatesAPIKomunikacija {
 		return response.toString();
 	}
 		
-	public LinkedList<Valuta> vratiIznosKurseva (String[] valute) {
+	public static LinkedList<Valuta> vratiIznosKurseva (String[] valute) {
 	
 		LinkedList<Valuta> listaValute = new LinkedList<Valuta>();
 		String url = null;
